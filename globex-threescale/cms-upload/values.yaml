@@ -42,7 +42,7 @@ git:
 
 cms:
   image: ghcr.io/fwmotion/3scale-cms:1.0.3
-  contextDir: ./dev_portal
+  contextDir: ./bootstrap/3scale/portal
   command: "upload -u"
 
 loop:
