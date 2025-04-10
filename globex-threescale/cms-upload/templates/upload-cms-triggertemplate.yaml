@@ -21,8 +21,7 @@ spec:
     - apiVersion: tekton.dev/v1beta1
       kind: PipelineRun
       metadata:
-        creationTimestamp: null
-        name: upload-cms-run-$(tt.params.threescaleTenant)
+        generateName: upload-cms-run-
       spec:
         params:
           - name: GIT_REPO
@@ -44,4 +43,4 @@ spec:
               claimName: workspace-upload-cms-pvc
           - name: provider-details
             secret:
-              secretName: 3scale-$(tt.params.threescaleTenant)-tenant-secret
+              secretName: 3scale-maas-tenant-secret
